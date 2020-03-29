@@ -9,9 +9,9 @@ import SendMessage from "./SendMessage";
 import {
   getConnected,
   getLoading
-} from "../services/general/general.selectores";
-import useActionCreator from "../hooks/useActionCreator";
-import { closeStreamRequest } from "../services/general/general.actions";
+} from "../../services/general/general.selectores";
+import useActionCreator from "../../hooks/useActionCreator";
+import { closeStreamRequest } from "../../services/general/general.actions";
 
 interface Props {}
 

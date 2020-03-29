@@ -1,8 +1,7 @@
-import React, { memo, useState } from "react";
+import React, { memo } from "react";
 import {
   makeStyles,
   ListItem,
-  Checkbox,
   ListItemText,
   ListItemSecondaryAction,
   List,
@@ -11,7 +10,7 @@ import {
   Typography
 } from "@material-ui/core";
 import { useSelector } from "react-redux";
-import { getMessages } from "../services/general/general.selectores";
+import { getMessages } from "../../services/general/general.selectores";
 
 interface Props {}
 
@@ -28,21 +27,8 @@ const useStyles = makeStyles(theme => ({
 
 const MessagesList: React.FC<Props> = () => {
   const classes = useStyles();
-  const [checked, setChecked] = useState([0]);
   const messages = useSelector(getMessages);
 
-  const handleToggle = (value: number) => () => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
-
-    if (currentIndex === -1) {
-      newChecked.push(value);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-
-    setChecked(newChecked);
-  };
   return (
     <List dense className={classes.root}>
       {messages.map(({ id, text, createdBy, date }) => {

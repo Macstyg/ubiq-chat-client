@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
-import Messages from "./Messages/Messages";
-import Home from "./Home";
+import Messages from "./pages/Messages/Messages";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (

@@ -1,12 +1,12 @@
 import React, { memo, useEffect } from "react";
-import logo from "./logo.svg";
-import ConnectionForm from "./ConnectionForm";
+import logo from "../../logo.svg";
+import ConnectionForm from "../../components/ConnectionForm";
 import { Snackbar } from "@material-ui/core";
 import MuiAlert, { AlertProps } from "@material-ui/lab/Alert";
 import { useSelector } from "react-redux";
-import { getError } from "./services/general/general.selectores";
-import { resetErrorMessage } from "./services/general/general.actions";
-import useActionCreator from "./hooks/useActionCreator";
+import { getError } from "../../services/general/general.selectores";
+import { resetErrorMessage } from "../../services/general/general.actions";
+import useActionCreator from "../../hooks/useActionCreator";
 
 interface Props {}
 

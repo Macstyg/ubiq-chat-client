@@ -1,7 +1,7 @@
 import React, { memo, useState } from "react";
 import { TextField, makeStyles, Button, Grid } from "@material-ui/core";
-import useActionCreator from "../hooks/useActionCreator";
-import { sendMessageRequest } from "../services/general/general.actions";
+import useActionCreator from "../../hooks/useActionCreator";
+import { sendMessageRequest } from "../../services/general/general.actions";
 
 interface Props {}
 

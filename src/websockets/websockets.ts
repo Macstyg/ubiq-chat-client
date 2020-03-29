@@ -1,9 +1,5 @@
 import io from "socket.io-client";
 import { ENDPOINT } from "../contants/constants";
-import { RootAction } from "../store/root.actions";
-import store from "../store/store";
-import { openStreamSuccess } from "../services/general/general.actions";
-import { ActionCreator } from "typesafe-actions";
 
 const ws: Record<string, any> = {
   default: ""

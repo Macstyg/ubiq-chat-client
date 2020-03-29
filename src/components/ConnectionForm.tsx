@@ -7,10 +7,10 @@ import {
   createStyles,
   CircularProgress
 } from "@material-ui/core";
-import useActionCreator from "./hooks/useActionCreator";
-import { openStreamRequest } from "./services/general/general.actions";
+import useActionCreator from "../hooks/useActionCreator";
+import { openStreamRequest } from "../services/general/general.actions";
 import { useSelector } from "react-redux";
-import { getLoading } from "./services/general/general.selectores";
+import { getLoading } from "../services/general/general.selectores";
 import { useHistory } from "react-router-dom";
 
 interface Props {}
@@ -27,7 +27,7 @@ const useStyles = makeStyles(
   })
 );
 
-const ConnectionForm: React.FC<Props> = ({}) => {
+const ConnectionForm: React.FC<Props> = () => {
   const [userName, setUserName] = useState("");
   const { root, form } = useStyles();
   const history = useHistory();
